@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Aux from '../../hoc/Aux.js';
+import Condenser from '../../hoc/Condenser.js';
 import './Layout.css';
 
 const Layout = (props) => (
-    <Aux>
+    <Condenser>
         <div>Toolbar, SideDrawer, Backdrop</div>
         <main className="Content">
             {props.children}
         </main>
-    </Aux>
+    </Condenser>
 );
 
 export default Layout;
