@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/Layout/Layout.js';
+import "./styles.css";
+
+import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder.js';
 
 class App extends Component {
   render(){
     return(
-      <div className="App">
-        <header className="app-header">
-          <p> This is awesome!!</p>
-        </header>
+      <div>
+        <Layout>
+          <BurgerBuilder />
+        </Layout>
       </div>
     );
   }
