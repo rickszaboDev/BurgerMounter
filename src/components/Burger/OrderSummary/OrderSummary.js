@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Condenser from '../../../hoc/Condenser.js'
+import Button from '../../UI/Buttons/Button.js';
 
 const orderSummary = (props) => {
     const summarizedIngredients = Object.keys(props.ingredients)
@@ -18,6 +20,9 @@ const orderSummary = (props) => {
             <ul>
                 {summarizedIngredients}
             </ul>
+            <p><strong>Total Price: ${props.price.toFixed(2)}</strong></p>
+            <Button type="Danger" clicked={props.onCloseModal}>CANCEL</Button>
+            <Button type='Success' clicked={props.onContinue}>CONTINUE</Button>
         </Condenser>
     );
 }
