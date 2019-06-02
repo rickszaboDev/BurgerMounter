@@ -1,9 +1,9 @@
 import React from 'react';
 
 import BuildControl from './BuildControl/BuildControl.js'
-import './BurgerControls.css';
+import './BuildControls.css';
 
-state = [
+const controls = [
     {label: 'Salad', type:'salad'},
     {label: 'Bacon', type:'bacon'},
     {label: 'Cheese', type:'cheese'},
@@ -13,9 +13,17 @@ state = [
 const buildControls = (props) =>{
     return(
     <div className='BurgerControls'>
-        {this.state.map(
+        <p>Current Price: <strong>{props.price.toFixed(2)}</strong></p>
+        {controls.map(
             el => {
-                return <BuildControl label={el.label} type={el.type} />
+                return <BuildControl 
+                    key={el.type}
+                    label={el.label}
+                    type={el.type} 
+                    added={() => props.addIngredient(el.type)}
+                    removed={() => props.removeIngredient(el.type)}
+                    disabled={props.disableInfo[el.type]} 
+                />
             }
         )}
     </div>
