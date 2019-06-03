@@ -1,0 +1,23 @@
+{
+    "c" : {
+        "name": "c",
+        "imgSrc": "https://ogimg.infoglobo.com.br/in/23286915-be5-8db/FT1500A/690/80185060_SOCOnca-pintada-da-Amazonia.-1.jpg",
+        "sciName": "b",
+        "type": "v",
+        "habitat": "c"
+    },
+    "d" : {
+        "name": "c",
+        "imgSrc": "",
+        "sciName": "b",
+        "type": "v",
+        "habitat": "c"
+    },
+    "e" : {
+        "name": "c",
+        "imgSrc": "https://ogimg.infoglobo.com.br/in/23286915-be5-8db/FT1500A/690/80185060_SOCOnca-pintada-da-Amazonia.-1.jpg",
+        "sciName": "b",
+        "type": "v",
+        "habitat": "c"
+    }
+}
