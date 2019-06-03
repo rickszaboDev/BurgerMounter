@@ -7,7 +7,7 @@ import Backdrop from '../Backdrop/Backdrop.js';
 const modal = (props) => {
    return(
     <Condenser>
-        <Backdrop show={ props.show } onModalClosed={props.onModalClosed} />
+        <Backdrop show={ props.show } onClosed={props.onModalClosed} />
         <div 
             className="Modal"
             style={{
