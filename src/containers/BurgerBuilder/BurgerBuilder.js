@@ -94,17 +94,17 @@ class BurgerBuilder extends Component{
         for(let key in disableInfo){
             disableInfo[key] = disableInfo[key] <= 0;
         }
-
+		let { purchasing, ingredients, totalPrice } = this.state
         return (
             <Condenser>
-                <Burger ingredients={this.state.ingredients}/>
+                <Burger ingredients={ingredients}/>
                 <Modal 
-                    show={this.state.purchasing}
+                    show={purchasing}
                     onModalClosed={this.closeModalHandler} 
                     >
                         <OrderSummary 
-                            ingredients={this.state.ingredients}
-                            price={this.state.totalPrice}
+                            ingredients={ingredients}
+                            price={totalPrice}
                             onCloseModal={this.closeModalHandler}
                             onContinue={this.ContinueHandler}
                         />
@@ -113,8 +113,8 @@ class BurgerBuilder extends Component{
                     addIngredient={this.addIngredientHandler} 
                     removeIngredient={this.removeIngredientHandler}
                     disableInfo={disableInfo} 
-                    price={this.state.totalPrice}  
-                    purchasable={this.state.purchasable}
+                    price={ttotalPrice}  
+                    purchasable={purchasable}
                     onOrdering={this.purchasingHandler}
                 />
             </Condenser>
